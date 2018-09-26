@@ -17,6 +17,10 @@ config :myKitchen, MyKitchenWeb.Endpoint,
   pubsub: [name: MyKitchen.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
+config :myKitchen, MyKitchenWeb.Guardian,
+  issuer: "myKitchen",
+  secret_key: "Secret key. You can use `mix guardian.gen.secret` to get one"
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",

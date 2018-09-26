@@ -4,7 +4,7 @@
   <div class="form-group">
     <%= text_input f, :name, placeholder: "name", class: "form-control" %>
     <%= error_tag f, :name %>
-    <%= text_input f, :email, placeholder: ":email", class: "form-control" %>
+    <%= text_input f, :email, placeholder: "email", class: "form-control" %>
     <%= error_tag f, :email %>
   </div>
   <%= submit "Signup", class: "btn btn-primary" %>
