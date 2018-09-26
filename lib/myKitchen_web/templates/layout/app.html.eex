@@ -12,16 +12,15 @@
   </head>
 
   <body>
+    <nav>
+      <h1 class="logo">MyKitchenApp</h1>
+      <div class="navlinks">
+        <a href="#">Home</a>
+        <a href="#">Login</a>
+        <%= link "Signup", to: user_path(@conn, :signup) %>
+      </div>
+    </nav>
     <div class="container">
-      <header class="header">
-        <nav role="navigation">
-          <ul class="nav nav-pills pull-right">
-            <li><a href="http://www.phoenixframework.org/docs">Get Started</a></li>
-          </ul>
-        </nav>
-        <span class="logo"></span>
-      </header>
-
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
 

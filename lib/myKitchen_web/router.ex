@@ -16,7 +16,15 @@ defmodule MyKitchenWeb.Router do
   scope "/", MyKitchenWeb do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
+    resources "/", KitchenController
+  end
+
+  scope "/user", MyKitchenWeb do
+    pipe_through :browser # Use the default browser stack
+
+    get "/login", UserController, :login
+    get "/logout", UserController, :logout
+    get "/signup", UserController, :signup
   end
 
   # Other scopes may use custom stacks.

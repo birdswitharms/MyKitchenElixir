@@ -1,4 +1,4 @@
-defmodule MyKitchenWeb.PageController do
+defmodule MyKitchenWeb.KitchenController do
   use MyKitchenWeb, :controller
 
   def index(conn, _params) do
