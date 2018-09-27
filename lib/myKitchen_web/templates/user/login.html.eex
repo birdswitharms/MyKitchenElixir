@@ -1,0 +1,11 @@
+<h3>Login</h3>
+
+<%= form_for @changeset, user_path(@conn, :login), fn f -> %>
+  <div class="form-group">
+    <%= email_input f, :email, placeholder: "email", class: "form-control" %>
+    <%= error_tag f, :email %>
+    <%= password_input f, :password, placeholder: "password", class: "form-control" %>
+    <%= error_tag f, :password %>
+  </div>
+  <%= submit "Login", class: "btn btn-primary" %>
+<% end %>

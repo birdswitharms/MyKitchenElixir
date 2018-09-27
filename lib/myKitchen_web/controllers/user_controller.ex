@@ -22,4 +22,10 @@ defmodule MyKitchenWeb.UserController do
         render conn, "signup.html", changeset: user_changeset
     end
   end
+
+  def login(conn, _params) do
+    user_changeset = User.changeset(%User{}, %{})
+
+    render conn, "login.html", changeset: user_changeset
+  end
 end

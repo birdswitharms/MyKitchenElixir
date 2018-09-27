@@ -16,7 +16,7 @@
       <h1 class="logo">MyKitchenApp</h1>
       <div class="navlinks">
         <a href="#">Home</a>
-        <a href="#">Login</a>
+        <%= link "Login", to: user_path(@conn, :login) %>
         <%= link "Signup", to: user_path(@conn, :new) %>
       </div>
     </nav>

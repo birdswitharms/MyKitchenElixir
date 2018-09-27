@@ -7,6 +7,7 @@ defmodule MyKitchenWeb.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug MyKitchenWeb.Plugs.SetUser
   end
 
   pipeline :api do
@@ -22,6 +23,7 @@ defmodule MyKitchenWeb.Router do
   scope "/user", MyKitchenWeb do
     pipe_through :browser # Use the default browser stack
 
+    get "login", UserController, :login
     resources "/", UserController
   end
 
