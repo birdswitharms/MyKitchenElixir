@@ -36,6 +36,8 @@ defmodule MyKitchen.Mixfile do
       {:phoenix, "~> 1.3.3"},
       {:phoenix_pubsub, "~> 1.0"},
       {:guardian, "~> 1.0"},
+      {:bcrypt_elixir, "~> 1.0"},
+      {:comeonin, "~> 4.0"},
       {:phoenix_ecto, "~> 3.2"},
       {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 2.10"},

@@ -17,7 +17,7 @@
       <div class="navlinks">
         <a href="#">Home</a>
         <a href="#">Login</a>
-        <%= link "Signup", to: user_path(@conn, :signup) %>
+        <%= link "Signup", to: user_path(@conn, :new) %>
       </div>
     </nav>
     <div class="container">
